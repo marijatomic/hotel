@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="474.0" prefWidth="671.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="hotel.controller.DodajRadnoMjestoController">
+  <children>
+    <Pane prefHeight="38.0" prefWidth="671.0" styleClass="zaglavlje">
+      <children>
+        <Label layoutX="260.0" layoutY="7.0" text="Pregled radnih mjesta" textFill="WHITE">
+          <font>
+            <Font name="System Bold" size="16.0" />
+          </font>
+        </Label>
+        <Button fx:id="odjavaBtn" layoutX="32.0" layoutY="4.0" mnemonicParsing="false" onAction="#povratakNatrag" styleClass="btn">
+          <graphic>
+            <ImageView styleClass="nazad" />
+          </graphic>
+        </Button>
+      </children>
+    </Pane>
+    <ScrollPane layoutX="14.0" layoutY="53.0" prefHeight="193.0" prefViewportHeight="311.0" prefViewportWidth="658.0" prefWidth="640.0">
+      <content>
+        <TableView id="sobeTbl" fx:id="mjestoTbl" prefHeight="205.0" prefWidth="639.0">
+          <columns>
+            <TableColumn prefWidth="209.0" text="ID" fx:id="idTblCol" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="195.0" text="Mjesto" fx:id="mjestoTblCol" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="219.0" text="Opis" fx:id="opisTblCol" />
+          </columns>
+        </TableView>
+      </content>
+    </ScrollPane>
+    <Pane layoutX="14.0" layoutY="251.0" prefHeight="223.0" prefWidth="640.0">
+      <children>
+        <Label layoutY="6.0" text="ID:">
+          <font>
+            <Font name="System Bold" size="12.0" fx:id="x1" />
+          </font>
+          <textFill>
+            <Color blue="0.867" green="0.404" red="0.235" fx:id="x2" />
+          </textFill>
+        </Label>
+        <Label font="$x1" layoutX="2.0" layoutY="41.0" text="Mjesto" textFill="$x2" />
+        <Label font="$x1" layoutX="2.0" layoutY="78.0" text="Vrsta sobe:" textFill="$x2" />
+        <TextField id="brojTxt" fx:id="mjestoTxt" layoutX="93.0" layoutY="37.0" prefHeight="25.0" prefWidth="208.0" />
+        <Button id="prijavaBtn" fx:id="izbrisiBtn" font="$x1" layoutX="563.0" layoutY="74.0" mnemonicParsing="false" onAction="#izbrisi" text="Izbriši" textFill="$x2" />
+        <Button id="prijavaBtn" fx:id="azurirajBtn" font="$x1" layoutX="481.0" layoutY="74.0" mnemonicParsing="false" onAction="#uredi" text="Ažuriraj" textFill="$x2" />
+        <Button id="prijavaBtn" fx:id="dodajBtn" font="$x1" layoutX="412.0" layoutY="74.0" mnemonicParsing="false" onAction="#spasi" text="Dodaj" textFill="$x2" />
+        <ImageView id="pozadina.png" fitHeight="106.0" fitWidth="307.0" layoutX="167.0" layoutY="112.0" styleClass="pozadina" />
+        <Label fx:id="idTxt" layoutX="93.0" layoutY="8.0" prefWidth="208.0" text="" />
+        <TextField id="brojTxt" fx:id="opisTxt" layoutX="93.0" layoutY="72.0" prefHeight="25.0" prefWidth="208.0" />
+      </children>
+    </Pane>
+  </children>
+  <stylesheets>
+    <URL value="@dodajradnomjesto.css" />
+  </stylesheets>
+</AnchorPane>
