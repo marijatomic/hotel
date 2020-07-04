@@ -1,0 +1,9 @@
+/*
+ * Empty Stylesheet file.
+ */
+.mainFxmlClass {
+
+}
+ImageView.pozadina {
+    -fx-image: url("pozadina.png"); 
+}
