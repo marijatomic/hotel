@@ -1,0 +1,37 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+Pane.zaglavlje{
+    -fx-background-color:#3c67dd;
+}
+Button.btn{
+    -fx-background-color:#3c67dd;
+}
+ImageView.pozadina {
+    -fx-image: url("pozadina.png"); 
+}
+ImageView.nazad {
+    -fx-image: url("nazad.png"); 
+}
+ImageView.hotel {
+    -fx-image: url("hotel.png"); 
+}
+ImageView.vrsta {
+    -fx-image: url("vrste_soba.png"); 
+}
+ImageView.sobe {
+    -fx-image: url("sobe.png"); 
+}
+ImageView.zaposlenici {
+    -fx-image: url("zaposlenici.png"); 
+}
+ImageView.gosti {
+    -fx-image: url("gosti.png"); 
+}
+ImageView.rezervacije {
+    -fx-image: url("rezervacija.png"); 
+}
