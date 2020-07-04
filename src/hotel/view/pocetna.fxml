@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="415.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="hotel.controller.PocetnaController">
+  <children>
+    <Pane layoutY="294.0" prefHeight="121.0" prefWidth="600.0">
+      <children>
+        <ImageView id="pozadina.png" fitHeight="106.0" fitWidth="307.0" layoutX="147.0" layoutY="14.0" styleClass="pozadina" />
+      </children>
+    </Pane>
+    <Pane prefHeight="38.0" prefWidth="600.0" styleClass="zaglavlje">
+      <children>
+        <Label layoutX="192.0" layoutY="9.0" text="Prijavljeni ste kao zaposlenik" textFill="WHITE">
+          <font>
+            <Font name="System Bold" size="16.0" />
+          </font>
+        </Label>
+        <Button fx:id="odjavaBtn" layoutX="32.0" layoutY="4.0" mnemonicParsing="false" onAction="#odjava" styleClass="btn">
+          <graphic>
+            <ImageView styleClass="nazad" />
+          </graphic>
+        </Button>
+      </children>
+    </Pane>
+    <Button fx:id="hotelBtn" layoutX="121.0" layoutY="94.0" mnemonicParsing="false" onAction="#pregledHotela" prefHeight="77.0" prefWidth="77.0">
+      <graphic>
+        <ImageView styleClass="hotel" />
+      </graphic>
+    </Button>
+    <Button fx:id="vrsteBtn" layoutX="262.0" layoutY="94.0" mnemonicParsing="false" onAction="#pregledVrstaSoba" prefHeight="77.0" prefWidth="77.0">
+      <graphic>
+        <ImageView styleClass="vrsta" />
+      </graphic>
+    </Button>
+    <Button fx:id="sobeBtn" layoutX="400.0" layoutY="94.0" mnemonicParsing="false" onAction="#pregledSoba" prefHeight="77.0" prefWidth="77.0">
+      <graphic>
+        <ImageView styleClass="sobe" />
+      </graphic>
+    </Button>
+    <Button fx:id="gostiBtn" layoutX="198.0" layoutY="217.0" mnemonicParsing="false" onAction="#pregledGostiju" prefHeight="77.0" prefWidth="80.0">
+      <graphic>
+        <ImageView styleClass="gosti" />
+      </graphic>
+    </Button>
+    <Label layoutX="145.0" layoutY="72.0" text="Hotel">
+      <font>
+        <Font name="System Bold" size="12.0" fx:id="x1" />
+      </font>
+      <textFill>
+        <Color blue="0.867" green="0.404" red="0.235" fx:id="x2" />
+      </textFill>
+    </Label>
+    <Label font="$x1" layoutX="272.0" layoutY="72.0" text="Vrste soba" textFill="$x2" />
+    <Label font="$x1" layoutX="426.0" layoutY="72.0" text="Sobe" textFill="$x2" />
+    <Label font="$x1" layoutX="223.0" layoutY="192.0" text="Gosti" textFill="$x2" />
+    <Label font="$x1" layoutX="344.0" layoutY="192.0" prefHeight="17.0" prefWidth="64.0" text="Rezervacije" textFill="$x2" />
+    <Button fx:id="rezervacijeBtn" layoutX="336.0" layoutY="217.0" mnemonicParsing="false" onAction="#pregledRezervacija" prefHeight="77.0" prefWidth="80.0">
+      <graphic>
+        <ImageView styleClass="rezervacije" />
+      </graphic>
+    </Button>
+  </children>
+  <stylesheets>
+    <URL value="@pocetna.css" />
+  </stylesheets>
+</AnchorPane>
