@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="584.0" prefWidth="671.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="hotel.controller.PregledZaposlenikaController">
+  <children>
+    <Pane prefHeight="38.0" prefWidth="671.0" styleClass="zaglavlje">
+      <children>
+        <Label layoutX="260.0" layoutY="7.0" text="Pregled zaposlenika" textFill="WHITE">
+          <font>
+            <Font name="System Bold" size="16.0" />
+          </font>
+        </Label>
+        <Button fx:id="odjavaBtn" layoutX="32.0" layoutY="4.0" mnemonicParsing="false" onAction="#povratakNatrag" styleClass="btn">
+          <graphic>
+            <ImageView styleClass="nazad" />
+          </graphic>
+        </Button>
+      </children>
+    </Pane>
+    <ScrollPane layoutX="16.0" layoutY="51.0" prefHeight="189.0" prefWidth="640.0">
+      <content>
+        <TableView fx:id="zaposleniciTbl" prefHeight="205.0" prefWidth="1355.0">
+          <columns>
+            <TableColumn prefWidth="75.0" text="ID" fx:id="idTblCol" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Ime" fx:id="imeTblCol" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Prezime" fx:id="prezimeTblCol" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Adresa" fx:id="adresaTblCol" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Telefon" fx:id="telTblCol" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="101.0" text="Plaća" fx:id="placaTblCol" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Korisničko ime" fx:id="kimeTblCol" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Lozinka" fx:id="lozinkaTblCol" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Radno mjesto" fx:id="rmjestoTblCol" />
+          </columns>
+        </TableView>
+      </content>
+    </ScrollPane>
+    <Pane layoutX="14.0" layoutY="251.0" prefHeight="323.0" prefWidth="640.0">
+      <children>
+        <Label layoutY="6.0" text="ID:">
+          <font>
+            <Font name="System Bold" size="12.0" fx:id="x1" />
+          </font>
+          <textFill>
+            <Color blue="0.867" green="0.404" red="0.235" fx:id="x2" />
+          </textFill>
+        </Label>
+        <Label font="$x1" layoutX="2.0" layoutY="41.0" text="Ime:" textFill="$x2" />
+        <Label font="$x1" layoutX="2.0" layoutY="78.0" text="Prezime:" textFill="$x2" />
+        <Label font="$x1" layoutY="119.0" text="Adresa:" textFill="$x2" />
+        <Label font="$x1" layoutX="-2.0" layoutY="161.0" text="Telefon:" textFill="$x2" />
+        <Label font="$x1" layoutX="340.0" layoutY="78.0" text="Lozinka:" textFill="$x2" />
+        <Label font="$x1" layoutX="340.0" layoutY="119.0" prefHeight="17.0" prefWidth="87.0" text="Radno mjesto:" textFill="$x2" />
+        <TextField fx:id="imeTxt" layoutX="93.0" layoutY="37.0" prefHeight="25.0" prefWidth="208.0" />
+        <TextField fx:id="prezimeTxt" layoutX="93.0" layoutY="74.0" prefHeight="25.0" prefWidth="208.0" />
+        <TextField fx:id="adresaTxt" layoutX="93.0" layoutY="115.0" prefHeight="25.0" prefWidth="208.0" />
+        <TextField fx:id="telTxt" layoutX="93.0" layoutY="157.0" prefHeight="25.0" prefWidth="208.0" />
+        <TextField fx:id="kimeTxt" layoutX="432.0" layoutY="37.0" prefHeight="25.0" prefWidth="208.0" />
+        <TextField fx:id="lozinkaTxt" layoutX="432.0" layoutY="74.0" prefHeight="25.0" prefWidth="208.0" />
+        <Button id="prijavaBtn" fx:id="izbrisiBtn" font="$x1" layoutX="562.0" layoutY="194.0" mnemonicParsing="false" onAction="#izbrisi" text="Izbriši" textFill="$x2" />
+        <Button id="prijavaBtn" fx:id="azurirajBtn" font="$x1" layoutX="492.0" layoutY="194.0" mnemonicParsing="false" onAction="#uredi" text="Ažuriraj" textFill="$x2" />
+        <Button id="prijavaBtn" fx:id="dodajBtn" font="$x1" layoutX="432.0" layoutY="194.0" mnemonicParsing="false" onAction="#spasi" text="Dodaj" textFill="$x2" />
+        <Label font="$x1" layoutX="340.0" layoutY="6.0" text="Plaća:" textFill="$x2" />
+        <Label font="$x1" layoutX="340.0" layoutY="41.0" text="Korisničko ime:" textFill="$x2" />
+        <ImageView id="pozadina.png" fitHeight="106.0" fitWidth="307.0" layoutX="161.0" layoutY="215.0" styleClass="pozadina" />
+        <ComboBox fx:id="rmjestoCB" layoutX="431.0" layoutY="115.0" prefHeight="25.0" prefWidth="208.0" />
+        <Label fx:id="idTxt" layoutX="93.0" layoutY="4.0" prefWidth="208.0" text="" />
+        <Button layoutX="432.0" layoutY="155.0" mnemonicParsing="false" onAction="#dodajRM" prefWidth="184.0" text="Dodaj radno mjesto" textFill="$x2" wrapText="false">
+          <font>
+            <Font name="System Bold" size="15.0" />
+          </font>
+        </Button>
+      </children>
+    </Pane>
+    <TextField fx:id="placaTxt" layoutX="444.0" layoutY="254.0" prefHeight="25.0" prefWidth="208.0" />
+  </children>
+  <stylesheets>
+    <URL value="@pregledzaposlenika.css" />
+  </stylesheets>
+</AnchorPane>
