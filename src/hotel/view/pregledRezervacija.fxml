@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="518.0" prefWidth="671.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="hotel.controller.PregledRezervacijaController">
+  <children>
+    <Pane prefHeight="38.0" prefWidth="671.0" styleClass="zaglavlje">
+      <children>
+        <Label layoutX="260.0" layoutY="7.0" text="Pregled rezervacija" textFill="WHITE">
+          <font>
+            <Font name="System Bold" size="16.0" />
+          </font>
+        </Label>
+        <Button fx:id="odjavaBtn" layoutX="32.0" layoutY="4.0" mnemonicParsing="false" onAction="#povratakNatrag" styleClass="btn">
+          <graphic>
+            <ImageView styleClass="nazad" />
+          </graphic>
+        </Button>
+      </children>
+    </Pane>
+    <ScrollPane layoutX="14.0" layoutY="53.0" prefHeight="193.0" prefViewportHeight="311.0" prefViewportWidth="658.0" prefWidth="640.0">
+      <content>
+        <TableView fx:id="rezervacijeTbl" prefHeight="205.0" prefWidth="639.0">
+          <columns>
+            <TableColumn prefWidth="43.0" text="ID" fx:id="idTblCol" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="107.0" text="Datum rezervacije" fx:id="datumRTblCol" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="116.0" text="Datum dolaska" fx:id="datumDTblCol" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="109.0" text="Datum polaska" fx:id="datumPTblCol" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="68.0" text="Broj sobe" fx:id="brojTblCol" />
+            <TableColumn maxWidth="5000.0" minWidth="0.0" prefWidth="92.0" text="Gost" fx:id="gostTblCol" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="92.0" text="Zaposlenik" fx:id="zaposlenikTblCol" />
+          </columns>
+        </TableView>
+      </content>
+    </ScrollPane>
+    <Pane layoutX="14.0" layoutY="251.0" prefHeight="259.0" prefWidth="640.0">
+      <children>
+        <Label layoutY="6.0" text="ID:">
+          <font>
+            <Font name="System Bold" size="12.0" fx:id="x1" />
+          </font>
+          <textFill>
+            <Color blue="0.867" green="0.404" red="0.235" fx:id="x2" />
+          </textFill>
+        </Label>
+        <Label font="$x1" layoutX="-2.0" layoutY="41.0" text="Datum rezervacije:" textFill="$x2" />
+        <Label font="$x1" layoutX="-2.0" layoutY="78.0" text="Datum dolaska:" textFill="$x2" />
+        <Label font="$x1" layoutX="-2.0" layoutY="119.0" text="Datum polaska:" textFill="$x2" />
+        <Label font="$x1" layoutX="338.0" layoutY="6.0" text="Broj sobe:" textFill="$x2" />
+        <Button id="prijavaBtn" fx:id="izbrisiBtn" font="$x1" layoutX="529.0" layoutY="119.0" mnemonicParsing="false" onAction="#izbrisi" text="Otkaži rezervaciju" textFill="$x2" />
+        <Button id="prijavaBtn" fx:id="azurirajBtn" font="$x1" layoutX="395.0" layoutY="119.0" mnemonicParsing="false" onAction="#uredi" text="Izmjeni rezervaciju" textFill="$x2" />
+        <Button id="prijavaBtn" fx:id="dodajBtn" font="$x1" layoutX="314.0" layoutY="120.0" mnemonicParsing="false" onAction="#spasi" text="Rezerviraj" textFill="$x2" />
+        <Label font="$x1" layoutX="337.0" layoutY="41.0" text="Gost:" textFill="$x2" />
+        <Label font="$x1" layoutX="337.0" layoutY="78.0" text="Zaposlenik:" textFill="$x2" />
+        <ImageView id="pozadina.png" fitHeight="106.0" fitWidth="307.0" layoutX="167.0" layoutY="162.0" styleClass="pozadina" />
+        <ComboBox fx:id="zaposlenikCB" layoutX="432.0" layoutY="74.0" prefHeight="25.0" prefWidth="208.0" />
+        <ComboBox fx:id="gostCB" layoutX="432.0" layoutY="37.0" prefHeight="25.0" prefWidth="208.0" />
+        <ComboBox fx:id="brojCB" layoutX="432.0" layoutY="2.0" prefHeight="25.0" prefWidth="208.0" />
+        <Label fx:id="idTxt" layoutX="112.0" layoutY="11.0" prefWidth="208.0" text="" />
+        <DatePicker fx:id="datumRTxt" layoutX="112.0" layoutY="37.0" prefHeight="25.0" prefWidth="200.0" />
+        <DatePicker id="datumRTxt" fx:id="datumDTxt" layoutX="112.0" layoutY="74.0" prefHeight="25.0" prefWidth="200.0" />
+        <DatePicker id="datumRTxt" fx:id="datumPTxt" layoutX="112.0" layoutY="113.0" prefHeight="25.0" prefWidth="200.0" />
+      </children>
+    </Pane>
+  </children>
+  <stylesheets>
+    <URL value="@pregledrezervacija.css" />
+  </stylesheets>
+</AnchorPane>
