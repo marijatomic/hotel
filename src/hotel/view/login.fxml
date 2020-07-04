@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="418.0" prefWidth="418.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="hotel.controller.LoginController">
+  <children>
+    <ImageView id="pozadina.png" fitHeight="170.0" fitWidth="418.0" layoutX="0.0" layoutY="241.0" styleClass="pozadina" />
+    <Pane layoutX="0.0" layoutY="0.0" prefHeight="241.0" prefWidth="412.0">
+      <children>
+        <Label layoutX="173.0" layoutY="14.0" text="Prijava">
+          <font>
+            <Font size="24.0" />
+          </font>
+          <textFill>
+            <Color blue="0.867" green="0.404" red="0.235" fx:id="x1" />
+          </textFill>
+        </Label>
+        <Label layoutX="51.0" layoutY="79.0" text="Korisničko ime:" textFill="$x1">
+          <font>
+            <Font name="System Bold" size="12.0" fx:id="x2" />
+          </font>
+        </Label>
+        <Label font="$x2" layoutX="51.0" layoutY="125.0" text="Lozinka:" textFill="$x1" />
+        <TextField fx:id="kimeTxt" layoutX="173.0" layoutY="75.0" />
+        <PasswordField fx:id="lozinkaTxt" layoutX="173.0" layoutY="121.0" />
+        <Button fx:id="prijavaBtn" font="$x2" layoutX="267.0" layoutY="174.0" mnemonicParsing="false" onAction="#prijava" text="Prijava" textFill="$x1" />
+        <Label fx:id="poruka" layoutX="51.0" layoutY="207.0" prefWidth="300.134765625" text="" />
+      </children>
+    </Pane>
+  </children>
+  <stylesheets>
+    <URL value="@login.css" />
+  </stylesheets>
+</AnchorPane>
