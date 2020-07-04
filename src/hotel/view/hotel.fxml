@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="671.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="hotel.controller.HotelController">
+  <children>
+    <Pane prefHeight="38.0" prefWidth="671.0" styleClass="zaglavlje">
+      <children>
+        <Label layoutX="260.0" layoutY="7.0" text="Podatci o hotelu" textFill="WHITE">
+          <font>
+            <Font name="System Bold" size="16.0" />
+          </font>
+        </Label>
+        <Button fx:id="odjavaBtn" layoutX="32.0" layoutY="4.0" mnemonicParsing="false" onAction="#povratakNatrag" styleClass="btn">
+          <graphic>
+            <ImageView styleClass="nazad" />
+          </graphic>
+        </Button>
+      </children>
+    </Pane>
+    <ImageView id="pozadina.png" fitHeight="167.0" fitWidth="423.0" layoutX="144.0" layoutY="219.0" styleClass="pozadina" />
+    <Label layoutX="19.0" layoutY="49.0" text="Ime hotela:">
+      <font>
+        <Font name="System Bold" size="12.0" fx:id="x1" />
+      </font>
+      <textFill>
+        <Color blue="0.867" green="0.404" red="0.235" fx:id="x2" />
+      </textFill>
+    </Label>
+    <Label font="$x1" layoutX="19.0" layoutY="84.0" prefHeight="17.0" prefWidth="84.0" text="Broj zvjezdica:" textFill="$x2" />
+    <Label font="$x1" layoutX="19.0" layoutY="123.0" text="Adresa:" textFill="$x2" />
+    <Label font="$x1" layoutX="19.0" layoutY="158.0" text="Broj telefona:" textFill="$x2" />
+    <Label font="$x1" layoutX="336.0" layoutY="49.0" text="E-mail:" textFill="$x2" />
+    <Label font="$x1" layoutX="336.0" layoutY="84.0" text="Vlasnik:" textFill="$x2" />
+    <Label font="$x1" layoutX="336.0" layoutY="123.0" text="Broj računa:" textFill="$x2" />
+    <Label layoutX="117.0" layoutY="49.0" text="Hotel Java" />
+    <Label layoutX="117.0" layoutY="84.0" text="TRI" />
+    <Label layoutX="117.0" layoutY="123.0" text="Matice Hrvatske b.b. Mostar, BiH" />
+    <Label layoutX="117.0" layoutY="158.0" text="036111222" />
+    <Label layoutX="424.0" layoutY="49.0" text="java@fpmoz.ba" />
+    <Label layoutX="424.0" layoutY="84.0" text="Pero Perić" />
+    <Label layoutX="424.0" layoutY="123.0" text="1111-2222-3333-4444" />
+  </children>
+  <stylesheets>
+    <URL value="@hotel.css" />
+  </stylesheets>
+</AnchorPane>
